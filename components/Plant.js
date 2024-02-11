@@ -6,6 +6,10 @@ export default function Plantobject() {
     <div id="canvas_container_div">
     <canvas id="canvas" width="1000" height="1000"></canvas> 
     </div>
+    createSunRays();
+    display();
+
+
     </>
   )
 }
@@ -875,7 +879,4 @@ function display() {
   renderShadows();
   window.requestAnimationFrame(display);
 }
-
-createSunRays();
-display();
 
