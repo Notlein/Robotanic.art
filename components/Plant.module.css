@@ -1,9 +1,9 @@
 
 .ccanvas_container_div {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100vw;
 }
 
 .ccanvas {
