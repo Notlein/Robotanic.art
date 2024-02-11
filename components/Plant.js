@@ -6,8 +6,8 @@ export default function Plantobject() {
     <div className={styles.ccanvas_container_div} id="canvas_container_div">
     <canvas className={styles.ccanvas} id="canvas"></canvas> 
     </div>
-    {createSunRays()}
-    {display()}
+    {/* {createSunRays()}
+    {display()} */}
 
 
     </>
