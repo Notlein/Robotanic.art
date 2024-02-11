@@ -1,6 +1,6 @@
 import styles from './Plant.module.css'
 
-export default function Plant() {
+export default function Plantobject() {
   return (
     <>
     <div id="canvas_container_div">

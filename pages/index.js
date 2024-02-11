@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Plant from '@components/Plant'
+import Plantobject from '@components/Plant'
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant (coming soon...)</code>
         </p>
       </main>
-      <Plant></Plant>
+      <Plantobject></Plantobject>
       <Footer />
     </div>
   )
