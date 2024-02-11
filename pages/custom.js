@@ -1,21 +1,3 @@
-import styles from './Plantobject.module.css'
-
-export default function Plantobject() {
-  return (
-    <>
-    {/* <div className={styles2#canvas_container_div} id="canvas_container_div">
-    <canvas className={styles2#canvas} id="canvas"></canvas> 
-    </div> */}
-    {/* {createSunRays()}
-    {display()} */}
-
-
-    </>
-  )
-}
-
-
-
 
 var canvasContainerDiv = document.getElementById("canvas_container_div");
 var canvas = document.getElementById("canvas");

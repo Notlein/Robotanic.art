@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Plantobject from '@components/Plantobject'
+import Plantobject from '@components/Plant'
+
+
 
 export default function Home() {
   return (
