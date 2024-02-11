@@ -6,8 +6,8 @@ export default function Plantobject() {
     <div id="canvas_container_div">
     <canvas id="canvas"></canvas> 
     </div>
-    {createSunRays()}
-    {display()}
+    {/* {createSunRays()}
+    {display()} */}
 
 
     </>
