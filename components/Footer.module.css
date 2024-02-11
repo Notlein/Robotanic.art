@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+img {
+  width: 200px;
+  height: auto;
+}
 
 .logo {
   height: 3em;
