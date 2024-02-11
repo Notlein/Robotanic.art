@@ -4,7 +4,7 @@ export default function Plantobject() {
   return (
     <>
     <div id="canvas_container_div">
-    <canvas id="canvas" width="1000" height="1000"></canvas> 
+    <canvas id="canvas"></canvas> 
     </div>
     {createSunRays()}
     {display()}
