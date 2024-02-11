@@ -837,7 +837,7 @@ function renderShadows() {
     ctx.lineTo( sh.p3.cx, sh.p3.cy );
     ctx.lineTo( sh.p4.cx, sh.p4.cy );
     ctx.lineTo( sh.p1.cx, sh.p1.cy );
-    ctx.fillStyle = "rgba(128, 255, 128, 0.15 )";
+    ctx.fillStyle = "rgba(128, 255, 128, 0.05 )";
     ctx.fill();  
   }
   //resets shadows
