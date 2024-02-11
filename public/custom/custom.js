@@ -745,7 +745,7 @@ function renderLeaf( plant, leafSpan ) {
   ctx.lineWidth = 0.5;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
-  ctx.strokeStyle = "#88FF88";
+  ctx.strokeStyle = "#224422";
   ctx.fillStyle = "transparent";
   var ah = 0.75;  // arc height
   //leaf top
@@ -767,7 +767,7 @@ function renderLeaf( plant, leafSpan ) {
   //leaf center
   ctx.beginPath();
   ctx.lineWidth = 0.25;
-  ctx.strokeStyle = "#88FF88";
+  ctx.strokeStyle = "#224422";
   ctx.moveTo(p1x,p1y);
   ctx.lineTo(p2x,p2y);
   ctx.stroke();
@@ -790,7 +790,7 @@ function renderStalks( plant, segment ) {
     ctx.beginPath();
     ctx.fillStyle = s.color;
     ctx.lineWidth = 0.25;
-    ctx.strokeStyle = "#88FF88";
+    ctx.strokeStyle = "#448844";
     ctx.moveTo(s.points[0].cx, s.points[0].cy);
     for(var j=1; j<s.points.length; j++) { ctx.lineTo(s.points[j].cx, s.points[j].cy); }
     ctx.lineTo(s.points[0].cx, s.points[0].cy);
@@ -799,7 +799,7 @@ function renderStalks( plant, segment ) {
     //outlines
     ctx.beginPath();
     ctx.lineWidth = 0.25;
-    ctx.strokeStyle = "#88FF88";
+    ctx.strokeStyle = "#448844";
     ctx.moveTo(s.points[3].cx, s.points[3].cy);
     ctx.lineTo(s.points[0].cx, s.points[0].cy);
     ctx.moveTo(s.points[2].cx, s.points[2].cy);
