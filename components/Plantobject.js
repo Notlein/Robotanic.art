@@ -1,4 +1,4 @@
-import styles from './Plant.module.css'
+import styles from './Plantobject.module.css'
 
 export default function Plantobject() {
   return (
