@@ -16,10 +16,10 @@ export default function Home() {
           The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant (coming soon...)</code>
         </p>
         <div style="display:flex">
-          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
-          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
-          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
-          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="300px"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="300px"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="300px"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="300px"></img>
         </div>
       </main>
 
