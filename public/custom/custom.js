@@ -862,3 +862,5 @@ function display() {
   window.requestAnimationFrame(display);
 }
 
+createSunRays();
+display();
