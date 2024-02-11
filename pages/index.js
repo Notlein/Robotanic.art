@@ -13,11 +13,11 @@ export default function Home() {
       <main>
         <Header title="Cyber_AGRI_culture" />
         <p className="description">
-          The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant<text>{}</text>(coming soon...)</code>
+          The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant<text>{{}}</text>(coming soon...)</code>
         </p>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
