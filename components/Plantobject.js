@@ -1,11 +1,11 @@
-import styles from './Plantobject.module.css'
+import styles2 from './Plantobject.module.css'
 
 export default function Plantobject() {
   return (
     <>
-    <div id="canvas_container_div">
-    <canvas id="canvas"></canvas> 
-    </div>
+    {/* <div className={styles2#canvas_container_div} id="canvas_container_div">
+    <canvas className={styles2#canvas} id="canvas"></canvas> 
+    </div> */}
     {/* {createSunRays()}
     {display()} */}
 
