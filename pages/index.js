@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Cyber_AGRI_culture</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="/custom/custom.js" />
+        <script src="public/custom/custom.js" />
       </Head>
 
       <main>
