@@ -19,7 +19,7 @@ export default function Home() {
           The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant (coming soon...)</code>
         </p>
       </main>
-      <Plantobject></Plantobject>
+      <Plantobject/>
       <Footer />
     </div>
   )
