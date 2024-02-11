@@ -1,9 +1,9 @@
 
 .ccanvas_container_div {
-  position: absolute;
+  /* position: absolute;
   bottom: -50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%); */
 }
 
 .ccanvas {
@@ -13,6 +13,6 @@
   transform: translate(-50%,-50%);
 }
 .images {
-  width: 200px;
+  width: 250px;
   height: auto;
 }
