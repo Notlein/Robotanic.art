@@ -742,7 +742,7 @@ function renderLeaf( plant, leafSpan ) {
   var p2y = leafSpan.p2.cy;
   var mpx = ( p1x + p2x ) / 2;  // mid point x
   var mpy = ( p1y + p2y ) / 2;  // mid point y
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 0.5;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
   ctx.strokeStyle = "#204020";
@@ -799,7 +799,7 @@ function renderStalks( plant, segment ) {
     //outlines
     ctx.beginPath();
     ctx.lineWidth = 0.25;
-    ctx.strokeStyle = "#408040";
+    ctx.strokeStyle = "#204020";
     ctx.moveTo(s.points[3].cx, s.points[3].cy);
     ctx.lineTo(s.points[0].cx, s.points[0].cy);
     ctx.moveTo(s.points[2].cx, s.points[2].cy);
@@ -837,7 +837,7 @@ function renderShadows() {
     ctx.lineTo( sh.p3.cx, sh.p3.cy );
     ctx.lineTo( sh.p4.cx, sh.p4.cy );
     ctx.lineTo( sh.p1.cx, sh.p1.cy );
-    ctx.fillStyle = "rgba( 128, 16, 128, 0.5 )";
+    ctx.fillStyle = "rgba(0, 32, 0, 0.25 )";
     ctx.fill();  
   }
   //resets shadows
