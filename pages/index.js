@@ -18,7 +18,7 @@ export default function Home() {
         <div><img src="/img/20231212_175730.jpg"></img><img src="/img/20231216_132417.jpg"></img><img src="/img/20231220_162928.jpg"></img><img src="/img/20240109_172754.jpg"></img></div> 
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
