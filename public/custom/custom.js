@@ -742,11 +742,11 @@ function renderLeaf( plant, leafSpan ) {
   var p2y = leafSpan.p2.cy;
   var mpx = ( p1x + p2x ) / 2;  // mid point x
   var mpy = ( p1y + p2y ) / 2;  // mid point y
-  ctx.lineWidth = 0.5;
+  ctx.lineWidth = 1;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
-  ctx.strokeStyle = "#224422";
-  ctx.fillStyle = "transparent";
+  ctx.strokeStyle = "#228822";
+  ctx.fillStyle = "rgba(64, 255, 64, 0.25 )";
   var ah = 0.75;  // arc height
   //leaf top
   var ccpx = mpx + ( p2y - p1y ) * ah;  // curve control point x
@@ -766,8 +766,8 @@ function renderLeaf( plant, leafSpan ) {
   ctx.fill();
   //leaf center
   ctx.beginPath();
-  ctx.lineWidth = 0.25;
-  ctx.strokeStyle = "#224422";
+  ctx.lineWidth = 0.5;
+  ctx.strokeStyle = "#228822";
   ctx.moveTo(p1x,p1y);
   ctx.lineTo(p2x,p2y);
   ctx.stroke();
@@ -837,7 +837,7 @@ function renderShadows() {
     ctx.lineTo( sh.p3.cx, sh.p3.cy );
     ctx.lineTo( sh.p4.cx, sh.p4.cy );
     ctx.lineTo( sh.p1.cx, sh.p1.cy );
-    ctx.fillStyle = "rgba(128, 255, 128, 0.05 )";
+    ctx.fillStyle = "rgba(255, 128, 255, 0.05 )";
     ctx.fill();  
   }
   //resets shadows
