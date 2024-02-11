@@ -482,7 +482,7 @@ function Segment( plant, parentSegment, basePoint1, basePoint2 ) {
   this.spLf2 = null;  // leaf 2 Span
   //skins
   this.skins = [];
-  this.skins.push( addSk( [ this.ptE1.id, this.ptE2.id, this.ptB2.id, this.ptB1.id ], "rgba(128, 255, 128, 0.05 )" ) );
+  this.skins.push( addSk( [ this.ptE1.id, this.ptE2.id, this.ptB2.id, this.ptB1.id ], "rgba(128, 255, 128, 0.25 )" ) );
 }
 
 ///sun ray constructor
