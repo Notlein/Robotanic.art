@@ -15,7 +15,12 @@ export default function Home() {
         <p className="description">
           The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant<text>{}</text>(coming soon...)</code>
         </p>
-        <div><img src="/img/20231212_175730.jpg"></img><img></img><img></img><img></img></div>
+        <div style="display:flex">
+          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
+          <img src="/img/20231212_175730.jpg" width="auto" height="30vh"></img>
+        </div>
       </main>
 
       {/* <Footer /> */}
