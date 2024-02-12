@@ -21,8 +21,6 @@ export default function Home() {
         </p>
       </main>
       <Plantobject/>
-      <Plantobject/>
-      <Plantobject/>
       <Footer />
       <script src="/custom/custom.js" />
     </div>

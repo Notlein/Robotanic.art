@@ -864,3 +864,5 @@ function display() {
 
 createSunRays();
 display();
+createSunRays();
+display();
