@@ -46,7 +46,7 @@ code {
   color: aquamarine;
   border-radius: 5px;
   padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+  /* font-family: Menlo, Monaco, Lucida Console, Courier New, monospace; */
 }
 
 .container {
@@ -58,5 +58,5 @@ code {
 }
 
 h1{
-  font-size: xx-large;
+  font-size: -webkit-xxx-large;
 }
