@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Pixeloid', sans-serif;
+  font-family: Pixeloid, sans-serif;
   src: url("/public/fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf");
   font-weight: bold;
 }
 @font-face {
-  font-family: 'Pixeloid', sans-serif;
+  font-family: Pixeloid, sans-serif;
   src: url("/public/fonts/pixeloid-font/PixeloidSans-mLxMm.ttf");
   font-weight:400;
 }
 @font-face {
-  font-family: 'Pixeloid mono', sans-serif;
+  font-family: Pixeloid mono, sans-serif;
   src: url("/public/fonts/pixeloid-font/PixeloidMono-d94EV.ttf");
   font-weight:400;
 }
@@ -18,7 +18,7 @@ html,
 body {
   color:#00ff00;
   background-color: black;
-  font-family: 'Pixeloid';
+  font-family: Pixeloid;
   padding: 0;
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
