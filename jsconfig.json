@@ -4,7 +4,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
-      "@custom/*":["public/custom/*"]
+      "@custom/*":["public/custom/*"],
+      "@fonts/*":["public/fonts/*"]
     }
   }
 }
