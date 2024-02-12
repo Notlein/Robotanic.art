@@ -1,16 +1,16 @@
 @font-face {
   font-family: Pixeloid, sans-serif;
-  src: url("/public/fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf");
+  src: url("/fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: Pixeloid, sans-serif;
-  src: url("/public/fonts/pixeloid-font/PixeloidSans-mLxMm.ttf");
+  src: url("/fonts/pixeloid-font/PixeloidSans-mLxMm.ttf");
   font-weight:400;
 }
 @font-face {
   font-family: Pixeloid mono, sans-serif;
-  src: url("/public/fonts/pixeloid-font/PixeloidMono-d94EV.ttf");
+  src: url("/fonts/pixeloid-font/PixeloidMono-d94EV.ttf");
   font-weight:400;
 }
 
