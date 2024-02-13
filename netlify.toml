@@ -4,3 +4,8 @@
 
 [[plugins]]
   package = "netlify-plugin-cypress"
+
+[dev]
+  port = 8888 
+  targetPort = 3000 
+  autoLaunch = true
