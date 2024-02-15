@@ -2,8 +2,9 @@ import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import Plantobject from '@components/Plant'
-
-
+import Content from '@components/Content'
+import Growth from '@components/Growth'
+import Timeline from '@components/Timeline'
 
 export default function Home() {
   return (
@@ -15,13 +16,16 @@ export default function Home() {
       </Head>
 
       <main>
+        <Timeline/>
         <Header title="Cyber_AGRI_culture" />
         <p className="description">
-          The cyberplant welcomes you. Here are the latest iterations to the <code>struct plant (coming soon...)</code>
+          <code>The cyberplant welcomes you.</code>
         </p>
-      </main>
+      <Growth/>
+      <Content/>
       <Plantobject/>
       {/* <Footer /> */}
+      </main>
       <script src="/custom/custom.js" />
     </div>
     

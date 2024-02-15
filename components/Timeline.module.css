@@ -1,0 +1,49 @@
+
+  
+  .flexdiv{
+    display: flex;
+    justify-content: flex-start;
+    width: 15em;
+    height:3em;
+    margin:1em 0;
+    align-items: center;
+    /* position: absolute; */
+    /* left: 50%;
+    transform: translate(-50%,-50%); */
+  }
+
+  .flexdiv:hover{
+    
+  }
+
+.plant{
+    height: 8em;
+    margin: 1em;
+    width:auto;
+}
+
+.wrap {
+    top:2em;
+    left:1em;
+    position: fixed;
+    width: 5em;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.span {
+    padding: 1em 0;
+    width:10em;
+    opacity:0.75;
+    transition: 0.075s ease-in-out;
+}
+
+.span:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.timelineHeader{
+    height:8em;
+
+}
