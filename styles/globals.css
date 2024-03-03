@@ -33,7 +33,7 @@ body {
 }
 
 main {
-  max-width:800px;
+  max-width:1000px;
   padding: 1rem;
   flex: 1;
   display: flex;

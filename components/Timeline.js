@@ -7,20 +7,16 @@ export default function Timeline() {
     <>
     <div className={styles.wrap}>
         <div className={styles.timelineHeader}><img className={styles.plant} src="/img/plant-grow.gif"></img></div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Home</span>
+            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;<a className={styles.a} href="#progress">Progress</a></span>
             </div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Inspirations and<br></br>
-            &nbsp;Historical work</span>
+            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;<a className={styles.a} href="#inspiration">Inspirations and<br></br>
+            &nbsp;Historical work</a></span>
             </div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Discuss</span>
+            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;<a className={styles.a} href="#forecast">Forecast</a></span>
             </div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Design</span>
+            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;<a className={styles.a} href="#energy">Energy</a></span>
             </div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Forecast</span>
-            </div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Energy</span>
-            </div>
-            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;Contact</span>
+            <div className={styles.flexdiv}>---<span className={styles.span}>&nbsp;<a className={styles.a} href="#discuss">Discuss</a></span>
             </div>
     </div>
     </>
