@@ -5,7 +5,7 @@ export default function Content() {
     <>
       <div className={styles.content}>
       <div id="progress">
-      <h3>The idea as of March 1st</h3>
+      <h3>The idea as of March 2024</h3>
         <p>
             The L-system as a generative tool to build a virtual plant can act as a bimodal interface between the plant and the audience. The virtual plant can receive chat prompts from the public in order to generate visual artifacts, echoing organic matter and data flux, and perhaps mix in some generative plant poetry in the visuals. To push the process further, the plant should require positive thoughts in the prompts as its ressource to grow and should transform negative thoughts, flaming, slurs, hate and other toxic form of behaviours into positive thoughts, therefore detoxifying the online interaction. However, it might be a good idea to give it real admin capabilities to block extreme forms of hateful content that may be harmful to the actual demonstration of the artwork.</p>
             <p>Currently working on the visual generation of L-Systems...</p>
