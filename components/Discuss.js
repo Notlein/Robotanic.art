@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Discuss.module.css';
 
+
 export default function Discuss({ onClose, isVisible  }) {
     const [isFocused, setIsFocused] = useState(false);
     const [message, setMessage] = useState(''); // To keep track of the input field
@@ -32,38 +33,44 @@ export default function Discuss({ onClose, isVisible  }) {
     
         // Call fetchChatGPTResponse and wait for the response
         const { text: chatGPTResponse } = await fetchChatGPTResponse(userMessage);
-    
+
         // Update the conversation state with the new messages
         setConversation(prev => [
           ...prev,
-          { sender: 'User', text: userMessage },
-          { sender: 'ChatGPT', text: chatGPTResponse }
+          { sender: 'You', text: userMessage },
+          { sender: 'Cyberplant', text: chatGPTResponse }
         ]);
         setMessage(''); // Clear the input field for the next message
     };
 
 
-    const fetchChatGPTResponse = async (message) => {
-        try {
-            const response = await fetch('/.netlify/functions/chatgpt', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ message }),
-            });
-    
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-    
-            const data = await response.json();
-            return { text: data.response }; // Wrap response in an object for consistency
-        } catch (error) {
-            console.error("Request failed", error);
-            return { text: "Sorry, I couldn't fetch a response. Please try again." }; // Return a consistent object structure
+// This function should be modified to call your server-side endpoint
+// which in turn calls the OpenAI API.
+const fetchChatGPTResponse = async (userMessage) => {
+    try {
+        const response = await fetch('/.netlify/functions/chatgpt', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: userMessage }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
-    };
+
+        const data = await response.json();
+        // Assuming the server returns { text: "chat response here" }
+        console.log(data.response.content);
+        return { text: data.response.content };
+    } catch (error) {
+        console.error("Request failed", error);
+        return { text: "Sorry, I couldn't fetch a response. Please try again." };
+    }
+};
+
+    
 
 
 
