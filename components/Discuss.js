@@ -31,7 +31,7 @@ export default function Discuss({ onClose, isVisible  }) {
         if (!userMessage) return; // Ignore empty or whitespace-only messages
     
         // Call fetchChatGPTResponse and wait for the response
-        const chatGPTResponse = await fetchChatGPTResponse(userMessage);
+        const { text: chatGPTResponse } = await fetchChatGPTResponse(userMessage);
     
         // Update the conversation state with the new messages
         setConversation(prev => [
@@ -43,27 +43,28 @@ export default function Discuss({ onClose, isVisible  }) {
     };
 
 
-// Example fetch request in your React app
-const fetchChatGPTResponse = async (message) => {
-    try {
-      const response = await fetch('/.netlify/functions/chatgpt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message }),
-      });
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      const data = await response.json();
-      console.log(data.response); // Use the response in your app
-    } catch (error) {
-      console.error("Request failed", error);
-    }
-  };
+    const fetchChatGPTResponse = async (message) => {
+        try {
+            const response = await fetch('/.netlify/functions/chatgpt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message }),
+            });
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+    
+            const data = await response.json();
+            return { text: data.response }; // Wrap response in an object for consistency
+        } catch (error) {
+            console.error("Request failed", error);
+            return { text: "Sorry, I couldn't fetch a response. Please try again." }; // Return a consistent object structure
+        }
+    };
+
 
 
     return (
