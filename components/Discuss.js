@@ -62,7 +62,7 @@ const fetchChatGPTResponse = async (userMessage) => {
 
         const data = await response.json();
         // Assuming the server returns { text: "chat response here" }
-        //console.log(data.response.content);
+        console.log(data.response.content);
         return { text: data.response.content };
     } catch (error) {
         console.error("Request failed", error);
