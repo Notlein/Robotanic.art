@@ -26,34 +26,44 @@ export default function Discuss({ onClose, isVisible  }) {
     }, [conversation]); // Dependency array to run effect when conversation updates
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent the form from submitting in the traditional way
         const userMessage = message.trim();
-        if (!userMessage) return;
+        if (!userMessage) return; // Ignore empty or whitespace-only messages
     
-        try {
-            const response = await fetch('/.netlify/functions/chatgpt', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ message: userMessage }),
-            });
+        // Call fetchChatGPTResponse and wait for the response
+        const chatGPTResponse = await fetchChatGPTResponse(userMessage);
     
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            
-            const data = await response.json();
-            setConversation(prev => [...prev, { sender: 'User', text: userMessage }, { sender: 'ChatGPT', text: data.response }]);
-            setMessage('');
-        } catch (error) {
-            console.error("Failed to fetch the ChatGPT response:", error);
-            // Handle the error appropriately in your UI
-        }
+        // Update the conversation state with the new messages
+        setConversation(prev => [
+          ...prev,
+          { sender: 'User', text: userMessage },
+          { sender: 'ChatGPT', text: chatGPTResponse }
+        ]);
+        setMessage(''); // Clear the input field for the next message
     };
 
 
-
+// Example fetch request in your React app
+const fetchChatGPTResponse = async (message) => {
+    try {
+      const response = await fetch('/.netlify/functions/chatgpt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message }),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log(data.response); // Use the response in your app
+    } catch (error) {
+      console.error("Request failed", error);
+    }
+  };
 
 
     return (
@@ -68,16 +78,16 @@ export default function Discuss({ onClose, isVisible  }) {
                     ))}
                 </div>
                 <form onSubmit={handleSubmit} className={styles.answerBox}>
-                    <input
-                        className={styles.input}
-                        placeholder='Type here'
-                        type="text"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        style={isFocused ? focusedStyle : defaultStyle}
-                        onFocus={() => setIsFocused(true)}
-                        onBlur={() => setIsFocused(false)}
-                    />
+                <input
+                className={styles.input}
+                placeholder="Type here"
+                type="text"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                style={isFocused ? focusedStyle : defaultStyle}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                />
                 </form>
             </div>
             </div>
