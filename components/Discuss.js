@@ -48,7 +48,7 @@ export default function Discuss({ onClose, isVisible  }) {
 // which in turn calls the OpenAI API.
 const fetchChatGPTResponse = async (userMessage) => {
     try {
-        const response = await fetch('https://robotanic.art/netlify/functions/chatgpt', {
+        const response = await fetch('/.netlify/functions/chatgpt', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
