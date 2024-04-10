@@ -79,7 +79,7 @@ const fetchChatGPTResponse = async (userMessage) => {
             <div className={`${styles.discuss} ${discussClass}`}>
 
             <div className={styles.box}>
-                <div className={styles.instructions}>Hello. Say something nice.<span className={styles.x} onClick={onClose}>x</span></div>
+                <div className={styles.instructions}>Hello. Say something nice to the cyberplant.<span className={styles.x} onClick={onClose}>x</span></div>
                 <div className={styles.rollingText} ref={rollingTextRef}>
                     {conversation.map((msg, index) => (
                         <div key={index}>{msg.sender}: {msg.text}</div>
