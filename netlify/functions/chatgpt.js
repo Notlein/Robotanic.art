@@ -22,9 +22,9 @@ exports.handler = async (event) => {
     // Sending the user message to OpenAI API and generating a response
     const response = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo', // Consider using the latest model for improved responses
-      messages: [{ role: 'user', content: `Respond positively to the following message: "${userMessage}"` }],
+      messages: [{ role: 'user', content: `Respond positively to the following message by trying to cheer up, talk about nurturing, taking your time and rate the toxicity where -5 is non-toxic and 5 is toxic conversation: "${userMessage}"` }],
       temperature: 0.9,
-      max_tokens: 150
+      max_tokens: 250
     });
     // Return the API response
     return {
