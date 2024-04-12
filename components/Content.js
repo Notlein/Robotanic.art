@@ -1,4 +1,5 @@
 import styles from './Content.module.css'
+import cp from '../public/vid/cp.mp4';
 
 export default function Content() {
   return (
@@ -9,17 +10,15 @@ export default function Content() {
       <p>
       This project explores the generation of L-systems, or Lindenmayer systems, and its rendering in openGL with a mechanism used for fractal generation. L-systems are composed of an alphabet, a starting axiom and a grammar (rules), which is implemented as an array of type char (or string) to be parsed by a fractal drawing system. The drawing mechanism used, referred to as ‘turtle graphics’, is designed to follow an axiom of symbols and execute each symbol in the string as an instruction. The instructions can draw lines, orient the drawing vector in space, draw different elements, and use the stack as a data structure for recursivity, allowing the generation of fractal structures. However, I found it hard to simulate specific types of biological plants, since the grammar to be used would be very complex and would require further refinements both in functionality and efficiency. Therefore, the different grammars used in this project mimic some visual qualities of botanical specimens, although loosely, with heavily abstracted and minimalist aesthetics. Additionally, a GUI provided allows for the manual control of different variables involved in the generation process - temperature, air humidity, soil humidity, light amount. The GUI also acts as a monitoring tool for when the system is in automatic mode, as it reads a JSON of data generated in real time by another system.
       </p>
-      <p> <video 
-          src="/vid/cp.mp4" 
-          width="100%" 
-          height="auto" 
-          autoPlay  
-          loop      
-          muted     
-          playsInline 
-        >
-          Your browser does not support the video tag.
-        </video></p>
+      <video
+        width="100%"
+        height="100%"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={cp} type='video/mp4' />
+      </video>
         <p>
             As such, the L-system as a generative tool to build a virtual plant can act as a bimodal interface between the plant and the audience. The virtual plant can receive chat prompts from the public in order to generate visual artifacts, echoing organic matter and data flux, and perhaps mix in some generative plant poetry in the visuals. To push the process further, the plant should require positive thoughts in the prompts as its ressource to grow and should transform negative thoughts, flaming, slurs, hate and other toxic form of behaviours into positive thoughts, therefore detoxifying the online interaction. However, it might be a good idea to give it real admin capabilities to block extreme forms of hateful content that may be harmful to the actual demonstration of the artwork.</p>
             <p>Currently working on the visual generation of L-Systems...</p>
