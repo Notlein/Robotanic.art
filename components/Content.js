@@ -33,7 +33,7 @@ export default function Content() {
       <p>
       This project explores the generation of L-systems, or Lindenmayer systems, and its rendering in openGL with a mechanism used for fractal generation. L-systems are composed of an alphabet, a starting axiom and a grammar (rules), which is implemented as an array of type char (or string) to be parsed by a fractal drawing system. The drawing mechanism used, referred to as ‘turtle graphics’, is designed to follow an axiom of symbols and execute each symbol in the string as an instruction. The instructions can draw lines, orient the drawing vector in space, draw different elements, and use the stack as a data structure for recursivity, allowing the generation of fractal structures. However, I found it hard to simulate specific types of biological plants, since the grammar to be used would be very complex and would require further refinements both in functionality and efficiency. Therefore, the different grammars used in this project mimic some visual qualities of botanical specimens, although loosely, with heavily abstracted and minimalist aesthetics. Additionally, a GUI provided allows for the manual control of different variables involved in the generation process - temperature, air humidity, soil humidity, light amount. The GUI also acts as a monitoring tool for when the system is in automatic mode, as it reads a JSON of data generated in real time by another system.
       </p>
-      <video className={styles.video} preload="none" autoPlay loop muted>
+      <video className={styles.vid} preload="none" autoPlay loop muted>
         <source src={"/vid/cp_low.mp4"} type='video/mp4'/>
       </video>
 
