@@ -44,10 +44,19 @@ exports.handler = async (event) => {
     });
 
     const openAIResponse = response.choices[0].message;
+    
+    // Store conversation in the database
+    await client.query(
+        query.Create(
+            query.Collection('chat_history'),
+            { data: { userMessage, openAIResponse } }
+        )
+    );
+
     // Return the API response
     return {
       statusCode: 200,
-      body: JSON.stringify({ response: response.choices[0].message }),
+      body: JSON.stringify({ response: openAIResponse }),
     };
   } catch (error) {
     // Handle any errors that occur during the API request
@@ -61,13 +70,7 @@ exports.handler = async (event) => {
 
 
 
-//     // Store conversation in the database
-//     await client.query(
-//         query.Create(
-//             query.Collection('chat_history'),
-//             { data: { userMessage, openAIResponse } }
-//         )
-//     );
+//     
 
 //     return {
 //       statusCode: 200,
