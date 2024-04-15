@@ -1,11 +1,11 @@
 // Inside /netlify/functions/chatgpt.js
 const { OpenAI } = require("openai");
-// const { query, Client } = require('faunadb');
+const { query, Client } = require('faunadb');
 
-// // Initialize the FaunaDB client with your secret key
-// const client = new Client({
-//     secret: process.env.FAUNA_SECRET
-// });
+// Initialize the FaunaDB client with your secret key
+const client = new Client({
+    secret: process.env.FAUNA_SECRET
+});
 
 
 exports.handler = async (event) => {
