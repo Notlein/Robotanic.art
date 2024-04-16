@@ -4,7 +4,7 @@ const { query, Client } = require('faunadb');
 
 // Initialize the FaunaDB client with your secret key
 const client = new Client({
-    secret: process.env.FAUNA_SECRET
+    secret: process.env.FAUNA_SECRET_ADMIN
 });
 
 
