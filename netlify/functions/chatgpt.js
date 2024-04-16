@@ -45,13 +45,18 @@ exports.handler = async (event) => {
 
     const openAIResponse = response.choices[0].message;
 
-    // Store conversation in the database
-    // await client.query(
-    //     query.Create(
-    //         query.Collection('chat_history'),
-    //         { data: { userMessage, openAIResponse } }
-    //     )
-    // );
+    try {
+      await client.query(
+          query.Create(
+              query.Collection('chat_history'),
+              { data: { userMessage, openAIResponse } }
+          )
+      );
+    } catch (dbError) {
+      console.error("Error storing data in FaunaDB:", dbError);
+      // Optionally, add this error information to your response to diagnose issues.
+      return { statusCode: 500, body: JSON.stringify({ error: "Failed to store data", details: dbError.message }) };
+    }
 
     // Return the API response
     return {
