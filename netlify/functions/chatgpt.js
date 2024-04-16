@@ -44,14 +44,14 @@ exports.handler = async (event) => {
     });
 
     const openAIResponse = response.choices[0].message;
-    
+
     // Store conversation in the database
-    await client.query(
-        query.Create(
-            query.Collection('chat_history'),
-            { data: { userMessage, openAIResponse } }
-        )
-    );
+    // await client.query(
+    //     query.Create(
+    //         query.Collection('chat_history'),
+    //         { data: { userMessage, openAIResponse } }
+    //     )
+    // );
 
     // Return the API response
     return {
