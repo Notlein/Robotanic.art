@@ -55,7 +55,6 @@ exports.handler = async (event) => {
     } catch (dbError) {
       console.error("Error storing data in FaunaDB:", dbError);
       // Optionally, add this error information to your response to diagnose issues.
-      return { statusCode: 500, body: JSON.stringify({ error: "Failed to store data", details: dbError.message }) };
     }
 
     // Return the API response
