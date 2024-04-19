@@ -1,5 +1,5 @@
 import styles from './Content.module.css'
-import handleClick from './Discuss'
+
 
 function fetchVideoAndPlay() {
   fetch('/vid/cp.mp4')
