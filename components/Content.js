@@ -1,5 +1,5 @@
 import styles from './Content.module.css'
-import handleClick from './Dicuss.js'
+import handleClick from './Discuss'
 
 function fetchVideoAndPlay() {
   fetch('/vid/cp.mp4')
@@ -69,7 +69,7 @@ export default function Content() {
       <p><img src="/img/michaelhansmeyer2.png" className={styles.img}></img></p>
       </div>
       {loadvid}
-      {handleClick}
+      {handleClick()}
     </>
   )
 }
