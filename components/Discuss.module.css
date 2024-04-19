@@ -1,10 +1,10 @@
 
   
   .box{
-    width:100%;
+    width:75%;
     position: fixed;
     min-width:300px;
-    height:95%;
+    height:625px;
     background-color: black;
     color: #00FF00;
     bottom: 20px;
