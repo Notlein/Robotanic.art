@@ -1,4 +1,6 @@
 .content{
+    max-width:1080px;
+    width:60vw;
     display:block;
     font-size: larger;
     margin: 1em 2em;
