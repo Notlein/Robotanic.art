@@ -70,6 +70,6 @@ export default function Content() {
       </div>
       {loadvid}
       
-    </>s
+    </>
   )
 }
