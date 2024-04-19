@@ -13,7 +13,6 @@ const [showDiscuss, setShowDiscuss] = useState(false);
 const handleClick = () => {
     setShowDiscuss(true);
 };
-setShowDiscuss(true);
 
 
   return (
