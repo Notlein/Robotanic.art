@@ -69,7 +69,7 @@ export default function Content() {
       <p><img src="/img/michaelhansmeyer2.png" className={styles.img}></img></p>
       </div>
       {loadvid}
-      {handleClick()}
-    </>
+      
+    </>s
   )
 }
